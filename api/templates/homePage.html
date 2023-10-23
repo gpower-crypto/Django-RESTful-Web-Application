@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Screen</title>
+    <style>
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>API Endpoints</h2>
+
+    <ul>
+        <li>POST http://127.0.0.1:8000/api/protein/- add a new record (this links to the protein view page, at the
+            bottom there is a form that we make the post request - validation via the serialisers) <br>
+            <a href="http://127.0.0.1:8000/api/protein/">http://127.0.0.1:8000/api/protein/</a>
+        </li>
+        
+        <li>GET http://127.0.0.1:8000/api/protein/[PROTEIN ID] - return the protein sequence and all we know about it
+            <br>
+            <a href="http://127.0.0.1:8000/api/protein/A0A016S8J7">http://127.0.0.1:8000/api/protein/A0A016S8J7</a>
+        </li>
+
+        <li>GET http://127.0.0.1:8000/api/pfam/[PFAM ID] - return the domain and it's description
+            <br><a href="http://127.0.0.1:8000/api/pfam/PF00360">http://127.0.0.1:8000/api/pfam/PF00360</a>
+        </li>
+
+        <li>GET http://127.0.0.1:8000/api/proteins/[TAXA ID] - return a list of all proteins for a given organism <br><a
+                href="http://127.0.0.1:8000/api/proteins/55661">http://127.0.0.1:8000/api/proteins/55661</a>
+        </li>
+
+        <li>GET http://127.0.0.1:8000/api/pfams/[TAXA ID] - return a list of all domains in all the proteins for a given
+            organism. <br><a href="http://127.0.0.1:8000/api/pfams/55661">http://127.0.0.1:8000/api/pfams/55661</a>
+        </li>
+
+        <li>GET http://127.0.0.1:8000/api/coverage/[PROTEIN ID] - return the domain coverage for a given protein. That
+            is Sum of the protein domain lengths (start-stop)/length of protein.<br><a
+                href="http://127.0.0.1:8000/api/coverage/A0A016S8J7">http://127.0.0.1:8000/api/coverage/A0A016S8J7</a>
+        </li>
+    </ul>
+</body>
+
+</html>
